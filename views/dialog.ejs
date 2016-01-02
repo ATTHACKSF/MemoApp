@@ -1,0 +1,24 @@
+<form method="POST" action="/memos<%= id ? '/' + id + '?_method=PUT' : '' %>">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">
+      <span aria-hidden="true">&times;</span><span class="sr-only">閉じる</span>
+    </button>
+    <h4 class="modal-title" id="modalTitle">メモ</h4>
+  </div>
+  <div class="modal-body">
+    <fieldset>
+      <div class="form-group">
+        <label for="title">タイトル</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="タイトル" value="<%= doc ? doc.title : '' %>" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="content">本文</label>
+        <textarea class="form-control" id="content" name="content" rows="5" placeholder="本文"><%= doc ? doc.content : '' %></textarea>
+      </div>
+    </fieldset>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary">保存</button>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">キャンセル</button>
+  </div>
+</form> 
