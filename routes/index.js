@@ -7,6 +7,7 @@ var moment = require('moment');
 var memo = require('../models/memo');
 var package = require('../package.json');
 
+
 // (b)ルーターの作成
 var router = express.Router();
 
